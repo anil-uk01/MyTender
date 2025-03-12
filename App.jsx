@@ -19,7 +19,6 @@ function App() {
 const AuthNavigation = () => {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
   return isLoggedIn ? <BottomTab /> : <StackNavigation />;
-  
 };
 
 export default App;

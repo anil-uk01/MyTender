@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {useDispatch} from 'react-redux';
-import {admin_login, login} from '../redux/actions/authActions';
 
 const SignInScreen = () => {
   const dispatch = useDispatch();
@@ -39,23 +38,6 @@ const SignInScreen = () => {
           <Text style={styles.signupLink}>Sign Up</Text>
         </TouchableOpacity>
       </Text>
-      <TouchableOpacity
-        style={{
-          width: '50%',
-          height: 30,
-          backgroundColor: '#007bff',
-          justifyContent: 'center',
-          alignItems: 'center',
-          borderRadius: 10,
-          marginTop: 10,
-          shadowColor: '#007bff',
-          shadowOpacity: 0.4,
-          shadowRadius: 6,
-          elevation: 2,
-        }}
-        onPress={() => dispatch(admin_login())}>
-        <Text style={styles.buttonText}>Admin Section</Text>
-      </TouchableOpacity>
     </View>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
 import {useSelector} from 'react-redux';
 
-const TenderList = () => {
+const UserScreen = () => {
   const tenders = useSelector(state => state.tender.tenders);
 
   return (
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
   deleteText: {color: '#fff', fontWeight: 'bold'},
 });
 
-export default TenderList;
+export default UserScreen;
