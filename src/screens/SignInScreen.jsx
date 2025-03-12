@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {useDispatch} from 'react-redux';
+import {login} from '../redux/actions/authActions';
 
 const SignInScreen = () => {
   const dispatch = useDispatch();
