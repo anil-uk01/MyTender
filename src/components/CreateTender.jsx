@@ -15,8 +15,8 @@ const CreateTender = () => {
   const [form, setForm] = useState({
     name: '',
     description: '',
-    startTime: '',
-    endTime: '',
+    closeDate: '',
+    amount: '',
   });
 
   const handleChange = (key, value) => {
@@ -24,7 +24,7 @@ const CreateTender = () => {
   };
 
   const handleSubmit = () => {
-    if (!form.name || !form.description || !form.startTime || !form.endTime) {
+    if (!form.name || !form.description || !form.closeDate || !form.amount) {
       alert('fill all data!');
       return;
     }
@@ -37,7 +37,7 @@ const CreateTender = () => {
     dispatch(addTender(newTender));
     alert('Tender Created Successfully!');
 
-    setForm({name: '', description: '', startTime: '', endTime: ''});
+    setForm({name: '', description: '', CloseDate: '', Amount: ''});
   };
 
   return (
@@ -57,15 +57,15 @@ const CreateTender = () => {
       />
       <TextInput
         style={styles.input}
-        placeholder="Start Time"
-        onChangeText={text => handleChange('startTime', text)}
-        value={form.startTime}
+        placeholder="Close Date"
+        onChangeText={text => handleChange('closeDate', text)}
+        value={form.closeDate}
       />
       <TextInput
         style={styles.input}
-        placeholder="End Time"
-        onChangeText={text => handleChange('endTime', text)}
-        value={form.endTime}
+        placeholder="Amount"
+        onChangeText={text => handleChange('amount', text)}
+        value={form.amount}
       />
 
       <TouchableOpacity style={styles.button} onPress={handleSubmit}>
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     justifyContent: 'center',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#4c41',
   },
   header: {
     fontSize: 22,
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
   },
   button: {
-    backgroundColor: '#28a745',
+    backgroundColor: '#007bff',
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',

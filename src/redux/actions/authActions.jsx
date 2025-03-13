@@ -9,7 +9,3 @@ export const login = () => ({
 export const logout = () => ({
   type: LOGOUT,
 });
-
-export const admin_login = () => ({
-  type: ADMIN_LOGIN,
-});

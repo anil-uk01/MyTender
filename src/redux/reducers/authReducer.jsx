@@ -10,8 +10,6 @@ const authReducer = (state = initialState, action) => {
       return {...state, isLoggedIn: true};
     case LOGOUT:
       return {...state, isLoggedIn: false};
-    case ADMIN_LOGIN:
-      return {...state, isLoggedIn: true};
     default:
       return state;
   }

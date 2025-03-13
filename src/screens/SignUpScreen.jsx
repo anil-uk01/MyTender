@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: 'lightgray',
     paddingHorizontal: 20,
   },
   header: {
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     height: 50,
-    backgroundColor: '#28a745',
+    backgroundColor: '#007bff',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     color: '#666',
   },
   signInLink: {
-    color: '#28a745',
+    color: '#007bff',
     fontWeight: 'bold',
   },
 });

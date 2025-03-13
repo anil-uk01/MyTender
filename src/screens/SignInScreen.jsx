@@ -16,7 +16,7 @@ const SignInScreen = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Welcome</Text>
+      <Text style={styles.header}>Get Your Tender</Text>
 
       <TextInput
         style={styles.input}
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: 'lightgray',
     paddingHorizontal: 20,
   },
   header: {

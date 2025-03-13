@@ -7,7 +7,7 @@ const UserScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Tenders List</Text>
+      <Text style={styles.header}>Tender List</Text>
 
       {tenders.length === 0 ? (
         <Text style={styles.noData}>No tenders available!</Text>
@@ -17,10 +17,13 @@ const UserScreen = () => {
           keyExtractor={item => item.id.toString()}
           renderItem={({item}) => (
             <View style={styles.card}>
-              <Text style={styles.title}>{item.name}</Text>
-              <Text>{item.description}</Text>
-              <Text>Start: {item.startTime}</Text>
-              <Text>End: {item.endTime}</Text>
+              <Text style={styles.listContainer}>{item.name}</Text>
+              <Text style={styles.listItem}>{item.description}</Text>
+              <Text style={styles.listItem}>Close Date: {item.closeDate}</Text>
+              <Text style={styles.listItem}>Amount: {item.amount}</Text>
+              <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>Accept Tender</Text>
+              </TouchableOpacity>
             </View>
           )}
         />
@@ -30,7 +33,7 @@ const UserScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {flex: 1, padding: 20, backgroundColor: '#f5f5f5'},
+  container: {flex: 1, padding: 30, backgroundColor: 'lightgray'},
   header: {
     fontSize: 22,
     fontWeight: 'bold',
@@ -39,22 +42,43 @@ const styles = StyleSheet.create({
   },
   noData: {textAlign: 'center', fontSize: 18, color: 'gray', marginTop: 20},
   card: {
-    backgroundColor: '#fff',
-    padding: 15,
-    borderRadius: 5,
-    marginBottom: 10,
-    borderWidth: 1,
-    borderColor: '#ddd',
+    backgroundColor: '#F6F0F0',
+    borderRadius: 20,
+    marginBottom: 30,
+    borderBottomColor: 'black',
   },
-  title: {fontSize: 18, fontWeight: 'bold'},
-  deleteButton: {
-    marginTop: 10,
-    padding: 10,
-    backgroundColor: 'red',
-    borderRadius: 5,
+  button: {
+    width: '100%',
+    height: 30,
+    backgroundColor: '#007bff',
+    justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 10,
+    marginTop: 10,
+    shadowColor: '#28a745',
+    shadowOpacity: 0.4,
+    shadowRadius: 6,
+    elevation: 3,
   },
-  deleteText: {color: '#fff', fontWeight: 'bold'},
+  listContainer: {
+    marginLeft: 10,
+    fontWeight: 'bold',
+    borderRadius: 10,
+    paddingVertical: 12,
+    width: '100%',
+  },
+  listItem: {
+    fontSize: 14,
+    color: '#333',
+    marginBottom: 6,
+    marginLeft: 10,
+    textAlign: 'left',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 15,
+    fontWeight: 'bold',
+  },
 });
 
 export default UserScreen;
